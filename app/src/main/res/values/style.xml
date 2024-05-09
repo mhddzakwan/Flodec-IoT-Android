@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomCardViewStyleTopCorner" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_top_corners</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_top_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">40dp</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="strokeColor">@color/white</item>
+    </style>
+
+
+    <style name="CustomCardViewStyleBottomCorner" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_buttom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_buttom_corners" parent="">
+        <item name="cornerSizeBottomRight">40dp</item>
+        <item name="cornerSizeBottomLeft">40dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="strokeColor">@color/white</item>
+    </style>
+
+    <style name="imageShape" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/SpecificCornerRounded</item>
+    </style>
+
+    <style name="SpecificCornerRounded" >
+        <item name="cornerSizeBottomLeft">65dp</item>
+        <item name="cornerSizeBottomRight">65dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item> <!-- Membuat status bar transparan -->
+       <!--        <item name="android:windowContentOverlay">@null</item>-->
+    </style>
+</resources>

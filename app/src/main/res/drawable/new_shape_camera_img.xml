@@ -1,0 +1,7 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Maskot berbentuk lingkaran -->
+    <item android:drawable="@drawable/circle" />
+
+    <!-- Gambar PNG yang akan diubah bentuknya -->
+    <item android:drawable="@drawable/camera_image2" />
+</layer-list>

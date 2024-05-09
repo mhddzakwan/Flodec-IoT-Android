@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!-- Oval shape -->
+        <item>
+            <shape android:shape="oval">
+                <solid android:color="#F0F" /> <!-- Warna latar -->
+            </shape>
+        </item>
+
+    <!-- Triangle shape (speech bubble) -->
+    <item
+        android:bottom="20dp" android:right="20dp" android:left="20dp">
+    <rotate android:fromDegrees="45">
+        <shape android:shape="rectangle">
+            <solid android:color="#F0F" />
+        </shape>
+    </rotate>
+</item>
+
+    </layer-list>
+
+

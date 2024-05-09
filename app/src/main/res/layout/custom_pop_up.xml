@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Judul Pop-up"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:fontFamily="@font/p_medium"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Keterangan -->
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ini adalah keterangan pop-up."
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Tombol-tombol -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPositive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Izinkan"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_background"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/buttonNegative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tidak"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_background"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
