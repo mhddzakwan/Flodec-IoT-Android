@@ -11,7 +11,7 @@ Flodec secara tepat menyasar dua poin SDGs yaitu poin 9 dan 11.
 
 FLODEC terdiri atas dua perangkat, pertama yaitu perangkat Internet of Things (IoT) dan kedua yaitu aplikasi _mobile_.
 
-IoT diimplementasikan menggunakan Arduino, terdiri dari bahasa C/C++ dan beberapa perangkat keras, seperti sensor jarak, _rain gauge_, kamera, dan beberapa komponen penting lainnya.  
+IoT diimplementasikan menggunakan NodeMCU dan ESP32 CAM sebagai mikrokomtroller. project IoT ini menggunakan bahasa C/C++ dan beberapa perangkat keras, seperti sensor jarak (HCSR04), _rain gauge_, kamera (ESP32-CAM), dan beberapa komponen penting lainnya.  
 
 Aplikasi _mobile_ dibuat dengan Android Studio dengan bahasa pemrograman Kotlin.
 
