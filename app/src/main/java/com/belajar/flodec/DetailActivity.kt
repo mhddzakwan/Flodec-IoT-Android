@@ -70,6 +70,8 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var intensitasTV: TextView
     private lateinit var debit: TextView
     private lateinit var keterangan: TextView
+    var isIntensitasChart = false
+    var isKetinggianChart = false
 
     //variabel realtime photo
     private lateinit var camerajpg: ShapeableImageView
@@ -206,26 +208,56 @@ class DetailActivity : AppCompatActivity() {
             true
         }
 
-        btnIntensitas.setOnClickListener {
-            btnIntensitas.setBackgroundColor(Color.BLACK)
-            btnIntensitas.setTextColor(Color.WHITE)
-            btnKetinggian.setBackgroundColor(Color.WHITE)
-            btnKetinggian.setTextColor(Color.BLACK)
-            descText.visibility=View.VISIBLE
-            lineChart.visibility=View.VISIBLE
-            pilih.visibility = View.INVISIBLE
-            intensitasHujanChart()
+        btnIntensitas.setBackgroundColor(Color.BLACK)
+        btnIntensitas.setTextColor(Color.WHITE)
+        btnKetinggian.setBackgroundColor(Color.WHITE)
+        btnKetinggian.setTextColor(Color.BLACK)
+        descText.visibility=View.VISIBLE
+        lineChart.visibility=View.VISIBLE
+        pilih.visibility = View.INVISIBLE
+        isIntensitasChart = true
 
+        btnIntensitas.setOnClickListener {
+            if(isIntensitasChart){
+                btnIntensitas.setBackgroundColor(Color.WHITE)
+                btnIntensitas.setTextColor(Color.BLACK)
+                descText.visibility=View.INVISIBLE
+                lineChart.visibility=View.INVISIBLE
+                pilih.visibility = View.VISIBLE
+                isIntensitasChart = false
+            }else{
+                btnIntensitas.setBackgroundColor(Color.BLACK)
+                btnIntensitas.setTextColor(Color.WHITE)
+                btnKetinggian.setBackgroundColor(Color.WHITE)
+                btnKetinggian.setTextColor(Color.BLACK)
+                descText.visibility=View.VISIBLE
+                lineChart.visibility=View.VISIBLE
+                pilih.visibility = View.INVISIBLE
+                isIntensitasChart = true
+                isKetinggianChart = false
+                intensitasHujanChart()
+            }
         }
         btnKetinggian.setOnClickListener {
-            btnIntensitas.setBackgroundColor(Color.WHITE)
-            btnIntensitas.setTextColor(Color.BLACK)
-            btnKetinggian.setBackgroundColor(Color.BLACK)
-            btnKetinggian.setTextColor(Color.WHITE)
-            descText.visibility=View.VISIBLE
-            lineChart.visibility=View.VISIBLE
-            pilih.visibility = View.INVISIBLE
-            ketinggianAirChart()
+            if (isKetinggianChart){
+                btnKetinggian.setBackgroundColor(Color.WHITE)
+                btnKetinggian.setTextColor(Color.BLACK)
+                descText.visibility=View.INVISIBLE
+                lineChart.visibility=View.INVISIBLE
+                pilih.visibility = View.VISIBLE
+                isKetinggianChart = false
+            }else{
+                btnIntensitas.setBackgroundColor(Color.WHITE)
+                btnIntensitas.setTextColor(Color.BLACK)
+                btnKetinggian.setBackgroundColor(Color.BLACK)
+                btnKetinggian.setTextColor(Color.WHITE)
+                descText.visibility=View.VISIBLE
+                lineChart.visibility=View.VISIBLE
+                pilih.visibility = View.INVISIBLE
+                isKetinggianChart = true
+                isIntensitasChart = false
+                ketinggianAirChart()
+            }
         }
 
         refreshBtn.setOnClickListener {
@@ -563,7 +595,8 @@ class DetailActivity : AppCompatActivity() {
 
                 // Tampilkan waktu yang diformat dalam TextView
                 infoWaktuTV.text = "$formattedTime WIB, $formattedDate"
-
+                if (isIntensitasChart){intensitasHujanChart()}
+                if (isKetinggianChart){ketinggianAirChart()}
                 fetchData()
 
                 // Jadwalkan diri sendiri untuk dieksekusi lagi setelah 1 detik

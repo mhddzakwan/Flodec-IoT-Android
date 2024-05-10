@@ -393,6 +393,7 @@ class MapFragment : Fragment() {
                     val startPoint = GeoPoint(latitude, longitude)
                     val startPoint2 = GeoPoint(3.567347, 98.659992)
                     mapController.setCenter(startPoint2)
+                    mapController.setZoom(18)
 
 //                    val compassOverlay = CompassOverlay(requireActivity(), InternalCompassOrientationProvider(requireActivity()), map)
 //                    compassOverlay.enableCompass()
