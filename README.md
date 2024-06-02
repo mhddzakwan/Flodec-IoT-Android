@@ -1,7 +1,8 @@
-#FLODEC (Flood Detector)
+**FLODEC (Flood Detector)** <br>
 Flodec adalah aplikasi android dan perangkat IoT yang dapat mendeteksi dan memprediksi banjir secara real-time
 <br>
-#Fitur - fitur 
+<br>
+**#itur - fitur**<br>
 Aplikasi Android: <br>
 1. Menyajikan peta menggunakan OpenStreet Map sebagai penanda lokasi pemasangan IoT<br>
 2. Menyajikan data jenis numerik real time seperti, ketinggian air, prediksi banjir dan surut, status wilayah, curah hujan, dll<br>
